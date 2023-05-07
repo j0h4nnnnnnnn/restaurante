@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Mi sitio web</title>
+        <style>
+            nav {
+                    background-color: #333;
+                    height: 80px;
+                    width: 100%;
+                }
+
+                ul {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                li {
+                    float: right;
+                }
+
+                li a {
+                    display: block;
+                    padding: 0 10px;
+                    color: pink;
+                    text-decoration: none;
+                    line-height: 50px;
+                }
+
+                li a:hover {
+                background-color: #555;
+                }
+                body {
+                background-color: #EBD0EC;
+                }
+                h1 {
+  
+ 
+                font-size: 3rem;
+                    
+                
+                font-weight: bold;
+                    
+                
+                color: blueviolet;
+                    text-align: center;
+                    
+                
+                text-transform: uppercase;
+                    
+                
+                letter-spacing: 2px;
+                    
+                
+                margin-top: 50px;
+                    
+                
+                margin-bottom: 30px;
+                }
+                .card-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+              }
+
+              .card {
+                background-color: #fff;
+                border-radius: 5px;
+                box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+                margin: 20px;
+                padding: 10px;
+                width: 300px;
+              }
+
+              .card img {
+                border-radius: 5px;
+                width: 100%;
+                height: 400px;
+                object-fit: cover;
+              }
+              footer {
+                background-color: #f2f2f2;
+                color: #555;
+                padding: 10px;
+                text-align: center;
+              }
+              .image-button {
+                display: inline-block;
+                width: 150px;
+                height: 150px;
+                background-image: url("https://i.pinimg.com/564x/4d/a4/8a/4da48a3383e3d11781326deb90c148e1.jpg" );
+                background-size: cover;
+                text-indent: -9999px; /* ocultar el texto del enlace */
+                display: flex;
+                  align-items: center;
+                  justify-content: center;
+              }
+  </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+              <li><a href="#">Contacto</a></li>
+              <li><a href="#">Nosotros</a></li>
+              <li><a href="#">Servicio</a></li>
+              <li><a href="#">Inicio</a></li>
+              <img src="https://i.pinimg.com/564x/4b/10/e8/4b10e8849b76942267bbd512063b096a.jpg" width="80px" height="80px" alt="Mama" style="border-radius: 50%;">
+            </ul>
+        </nav>
+        <br>
+        <div style="text-align: center;">
+            <img src="https://i.pinimg.com/originals/75/a7/76/75a776f3348ca26727dbd873be8fc318.jpg" alt="Imagen grande" height="500px"width="1300px">
+        </div>
+
+        <br>
+        <div>
+            <h1>Es tiempo de Endulzar </h1>
+        </div>
+        <br>
+        <br>
+        <div class="card-container">
+            <div class="card">
+              <img src="https://i.pinimg.com/564x/03/e6/76/03e676c92b62e7d0973bcbb99b6d74ec.jpg" width="80" height="150" alt="Imagen 1">
+              <h3>Cupcake</h3>
+            </div>
+            <div class="card">
+              <img src="https://i.pinimg.com/736x/68/b6/cd/68b6cd231036573102f13c08561937ae.jpg" width="80" height="150" alt="Imagen 2">
+              <h3>Macarrons</h3>
+            </div>
+            <div class="card">
+                <img src="https://i.pinimg.com/564x/92/04/22/920422eecdce1d4aa4afd3b22cccf556.jpg" width="80" height="150" alt="Imagen 1">
+                <h3>MilkShake</h3>
+            </div>
+            <div class="card">
+                <img src="https://i.pinimg.com/564x/d5/28/cc/d528cc865994ade62d50be345620e5ff.jpg" width="80" height="150" alt="Imagen 1">
+                <h3>Icecream</h3>
+            </div>
+            <div class="card">
+                <img src="https://i.pinimg.com/564x/0b/60/dd/0b60dd7d764abe7fa8efc7645603ae53.jpg" width="80" height="150" alt="Imagen 1">
+                <h3>Donas</h3>
+            </div>
+            <div class="card">
+                <img src="https://i.pinimg.com/564x/58/fc/e0/58fce060cfec84fb3a7a4ad8e065d986.jpg" width="80" height="150" alt="Imagen 1">
+                <h3>Fruticake</h3>
+            </div>
+            <div class="card">
+                <img src="https://i.pinimg.com/564x/14/27/4e/14274e2788919a3ebbb63cbbe1fa50ae.jpg" width="80" height="150" alt="Imagen 1">
+                <h3>Tarta</h3>
+            </div>
+        </div>
+        <br>
+        <br>
+            <div>
+                <h1>Tu opinion es importante</h1>
+                <br>
+                <a href="/nuevasolicitud" class="image-button"></a>
+            </div>
+        <br>
+        <br>
+        <footer>
+            <div class="contacto">
+              <h3>Contacto</h3>
+              <p>Dirección:Av. 12 de Octubre y Don Bosco</p>
+              <p>Teléfono: +593 968979043</p>
+              <ul class="redes-sociales">
+                <li><a href="https://www.facebook.com/mi-pagina"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.twitter.com/mi-pagina"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/mi-pagina"><i class="fa fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </footer>
+            
+            
+          
+
+            
+        
+          
+    </body>
+</html>

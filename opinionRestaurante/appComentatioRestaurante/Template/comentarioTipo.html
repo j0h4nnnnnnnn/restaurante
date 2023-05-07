@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign</title>
+    <style>
+        *{
+           margin: 0; 
+           padding: 0;
+           box-sizing: border-box;
+        }
+        .form-register{
+            width: 400px;
+            background: peachpuff;
+            padding: 30px;
+            margin: auto;
+            margin-top: 100px;
+            border-radius: 4px;
+        }
+
+        .controls{
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+            border:1px;
+        }
+        /* Estilos para las tablas de emoji */
+        .emoji-table {
+        width: 100%;
+        margin-bottom: 1rem;
+        border-collapse: collapse;
+        }
+
+        .emoji-table td {
+        padding: 0.5rem;
+        
+        }
+        .emoji-table img {
+        max-width: 70px;
+        }
+        .emoji-table img {
+        transition: transform 0.3s;
+        }
+
+        .emoji-table img:hover {
+        transform: rotate(40deg);
+        }
+
+        .emoji-table img:active {
+        transform: rotate(-10deg);
+        }
+        .emoji-table img.selected {
+        border: 2px solid #ffcc00;
+        border-radius: 50%;
+        background-color: #ffcc00; 
+        transition: background-color 0.3s ease-in-out;
+        }
+        
+    </style>
+    <link rel="stylesheet" type="text/css" href="estilo.css"/>
+</head>
+<!-- Sección emojis-->
+
+
+<body>
+    <section class="form-register"> 
+      <h1 class="titulo">Tu opinión es importante</h1>
+      <form action="/predecir/" method="post">
+        {% csrf_token %}
+        <p>Comentario:</p>
+        <input type="text" name="comentario" class="controls">
+        <p>Servicio:</p>
+        <table id="servicio-picker" class="emoji-table">
+          <tr>
+            <td><img id="emoji-servicio-2" src="https://em-content.zobj.net/source/microsoft-teams/337/pouting-face_1f621.png" alt="Emoji 1" data-value="1" /></td>
+            <td><img id="emoji-servicio-2" src="https://em-content.zobj.net/source/microsoft-teams/337/confused-face_1f615.png" alt="Emoji 2" data-value="2" /></td>
+            <td><img id="emoji-servicio-3" src="https://em-content.zobj.net/source/microsoft-teams/337/smiling-face-with-smiling-eyes_1f60a.png" alt="Emoji 3" data-value="3"  /></td>
+            <td><img id="emoji-servicio-4" src="https://em-content.zobj.net/source/microsoft-teams/337/smiling-face-with-heart-eyes_1f60d.png" alt="Emoji 4" data-value="4" /></td>
+          </tr>
+        </table>
+        <input type="hidden" name="servicio" id="servicio-input" value="">
+        <p>Comida:</p>
+        <table id="comida-picker" class="emoji-table">
+          <tr>
+            <td><img id="emoji-comida-1" src="https://em-content.zobj.net/source/microsoft-teams/337/pouting-face_1f621.png" alt="Emoji 1" data-value="1"/></td>
+            <td><img id="emoji-comida-2" src="https://em-content.zobj.net/source/microsoft-teams/337/confused-face_1f615.png" alt="Emoji 2" data-value="2"/></td>
+            <td><img id="emoji-comida-3" src="https://em-content.zobj.net/source/microsoft-teams/337/smiling-face-with-smiling-eyes_1f60a.png" alt="Emoji 3" data-value="3" /></td>
+            <td><img id="emoji-comida-4" src="https://em-content.zobj.net/source/microsoft-teams/337/smiling-face-with-heart-eyes_1f60d.png" alt="Emoji 4"data-value="4" /></td>
+          </tr>
+        </table>
+        <input type="hidden" name="comida" id="comida-input" value="">
+        <p>Ambiente:</p>
+        <table id="ambiente-picker" class="emoji-table">
+            <tr>
+                <td><img id="emoji-comida-1" src="https://em-content.zobj.net/source/microsoft-teams/337/pouting-face_1f621.png" alt="Emoji 1" data-value="1"/></td>
+                <td><img id="emoji-comida-2" src="https://em-content.zobj.net/source/microsoft-teams/337/confused-face_1f615.png" alt="Emoji 2" data-value="2"/></td>
+                <td><img id="emoji-comida-3" src="https://em-content.zobj.net/source/microsoft-teams/337/smiling-face-with-smiling-eyes_1f60a.png" alt="Emoji 3" data-value="3" /></td>
+                <td><img id="emoji-comida-4" src="https://em-content.zobj.net/source/microsoft-teams/337/smiling-face-with-heart-eyes_1f60d.png" alt="Emoji 4"data-value="4" /></td>
+              </tr>
+        </table>
+        <input type="hidden" name="ambiente" id="ambiente-input" value="">
+        <p class=""><input type="submit" value="Enviar"></p>
+
+
+       
+
+    <!-- Para los links
+        <div id="ambiente-picker">
+          <img id="emoji-ambiente-1" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Angry_Emoji_large.png?v=1571606038" alt="Emoji 1" />
+          <img id="emoji-ambiente-2" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Confused_Face_Emoji_large.png?v=1571606037" alt="Emoji 2" />
+          <img id="emoji-ambiente-3" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Slightly_Smiling_Face_Emoji_87fdae9b-b2af-4619-a37f-e484c5e2e7a4_large.png?v=1571606036" alt="Emoji 3" />
+          <img id="emoji-ambiente-4" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Heart_Eyes_Emoji_large.png?v=1571606037" alt="Emoji 1" />
+        </div>
+    -->
+<!-- Sección original-->
+<!-- 
+<body >
+    
+    <section class="form-register"> 
+        <h1 class="titulo">Tu opinion es importante </h1>
+        <form action="/predecir/" method="post">
+            {% csrf_token %}
+            <p >Comentario:
+                <input type="text" name="comentario" class="controls"></p>
+            <p>Servicio:
+                <input type="number" name="servicio" class="controls"></p>
+            <p>Comida:
+                <input type="number" name="comida" class="controls" ></p>
+            <p>Ambiente:
+                <input type="number" name="ambiente" class="controls"></p>
+            <p class=""><input type="submit" value="Enviar"></p>
+        </form>
+
+    </section>
+</body>
+
+    </section>-->
+    <script>
+                // Servicio picker
+        // Servicio picker
+        const servicioPicker = document.querySelector("#servicio-picker");
+        const servicioInput = document.querySelector("#servicio-input");
+
+        servicioPicker.addEventListener("click", (event) => {
+        const selectedEmoji = event.target;
+        if (selectedEmoji.tagName === "IMG") {
+            const emojiValue = selectedEmoji.getAttribute("data-value");
+            servicioInput.value = emojiValue;
+            // quitar la clase 'selected' de todas las imágenes en el servicioPicker
+            const servicioImages = servicioPicker.querySelectorAll("img");
+            servicioImages.forEach((img) => img.classList.remove("selected"));
+            // agregar la clase 'selected' a la imagen seleccionada
+            selectedEmoji.classList.add("selected");
+            console.log(servicioInput.value);
+        }
+        });
+
+        // Comida picker
+        const comidaPicker = document.querySelector("#comida-picker");
+        const comidaInput = document.querySelector("#comida-input");
+
+        comidaPicker.addEventListener("click", (event) => {
+        const selectedEmoji = event.target;
+        if (selectedEmoji.tagName === "IMG") {
+            const emojiValue = selectedEmoji.getAttribute("data-value");
+            comidaInput.value = emojiValue;
+            // quitar la clase 'selected' de todas las imágenes en el comidaPicker
+            const comidaImages = comidaPicker.querySelectorAll("img");
+            comidaImages.forEach((img) => img.classList.remove("selected"));
+            // agregar la clase 'selected' a la imagen seleccionada
+            selectedEmoji.classList.add("selected");
+            console.log(comidaInput.value);
+        }
+        });
+
+        // Ambiente picker
+        const ambientePicker = document.querySelector("#ambiente-picker");
+        const ambienteInput = document.querySelector("#ambiente-input");
+
+        ambientePicker.addEventListener("click", (event) => {
+        const selectedEmoji = event.target;
+        if (selectedEmoji.tagName === "IMG") {
+            const emojiValue = selectedEmoji.getAttribute("data-value");
+            ambienteInput.value = emojiValue;
+            // quitar la clase 'selected' de todas las imágenes en el ambientePicker
+            const ambienteImages = ambientePicker.querySelectorAll("img");
+            ambienteImages.forEach((img) => img.classList.remove("selected"));
+            // agregar la clase 'selected' a la imagen seleccionada
+            selectedEmoji.classList.add("selected");
+            console.log(ambienteInput.value);
+        }
+        });
+        
+        
+        
+
+    </script>
+</body>
+</html>
